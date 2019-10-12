@@ -4,19 +4,20 @@ class Song
    
     @@all = []
      
-    def initialize(name)
-      @name = name
-      @@all << self
-    end
+  def initialize(name)
+    @name = name
+    @@all << self
+  end
     
-    def self.all
-      @@all
-    end
+  def self.all
+    @@all
+  end
     
-    #def self.new_by_filename(file) ###NEED CORRECTION ??
-   #   song = self.new
-    #  song.name = file.split(" - ")[1]
- # end
+  def self.new_by_filename(file)
+    song.name = file.split(" - ")[1]
+    artist.name = file.split(" - ")[0]
+    song_name = artist.self
+  end
    
   def self.new_by_filename(file)
     song_name = file.split(" - ")[1]
